@@ -1,0 +1,133 @@
+.hero {
+  background-image: url(https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-size: cover;
+}
+
+.hero-2 {
+  background-image: url(https://images.unsplash.com/photo-1585892478726-d26363dbf9e8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-size: cover;
+  background-position: 50%;
+}
+
+
+.hero-3 {
+  background-image: url(https://images.unsplash.com/photo-1614928228253-dc09cbc3b11c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-size: cover;
+  background-position: 50%;
+}
+
+.hero-4 {
+  background-image: url(https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-size: cover;
+  background-position: 50%;
+}
+
+
+.t-shadow {
+  text-shadow: 0px 12px 20px rgba(0, 0, 0, 0.467);
+}
+
+
+
+
+.pic div:nth-of-type(1) div {
+  background-image: url(https://images.unsplash.com/photo-1549476464-37392f717541?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGd1eSUyMGd5bXxlbnwwfHwwfHx8MA%3D%3D);
+  background-size: cover;
+}
+
+.pic div:nth-of-type(2) div {
+  background-image: url(https://images.unsplash.com/photo-1574680088814-c9e8a10d8a4d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Z2lybCUyMGd5bXxlbnwwfHwwfHx8MA%3D%3D);
+  background-size: cover;
+}
+
+
+.blog:hover img {
+  transform: scale(1.05);
+}
+
+.blog:hover button {
+  color: red;
+  gap: 1rem;
+}
+
+
+.blog {
+  cursor: pointer;
+}
+
+
+.item-1,
+.item-2,
+.item-3,
+.item-4,
+.item-5,
+.item-6 {
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: inset 2px 2px 8px 400px rgba(0, 0, 0, 0.246);
+  transition: .3s;
+}
+
+.item-1 {
+  background-image: url(https://images.pexels.com/photos/6456008/pexels-photo-6456008.jpeg?auto=compress&cs=tinysrgb&w=600);
+}
+
+.item-2 {
+  background-image: url(https://images.unsplash.com/photo-1542937307-6eeb0267cbab?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8bWFydGlhbCUyMGFydHMlMjBneW18ZW58MHx8MHx8fDI%3D);
+  background-position: 50%;
+}
+
+.item-3 {
+  background-image: url(https://www.macseattle.com/wp-content/webpc-passthru.php?src=https://www.macseattle.com/wp-content/uploads/2023/01/MAC-Burn-Group-Classes-Web.jpg&nocache=1);
+  background-position: 50%;
+}
+
+.item-4 {
+  background-image: url(https://images.unsplash.com/photo-1518611012118-696072aa579a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDV8fGd5bSUyMGN5Y2xpbmd8ZW58MHx8MHx8fDI%3D);
+  background-position: 80%;
+}
+
+.item-5 {
+  background-image: url(https://images.unsplash.com/photo-1517438322307-e67111335449?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Ym94aW5nJTIwZ3ltfGVufDB8fDB8fHwy);
+  background-position: 40%;
+}
+
+.item-6 {
+  background-image: url(https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg?auto=compress&cs=tinysrgb&w=600);
+}
+
+.parent:hover div:first-child {
+  transform: scale(1.2);
+  filter: grayscale(0);
+}
+
+
+
+.trainer {
+  background-image: url(https://lh3.googleusercontent.com/pw/ABLVV85z5iOHytzSF890GKlBUs9sekzFZ-GbJVOWXP1_3cfKqlCFT4rmLVsd5NNAUU_NzhdX9GXm5CY0csEcItGf_fIN11exQdd9Hf9fWsOOWYjOEoumELMq=w2400);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 100%;
+}
+
+
+
+@media (max-width:660px) {
+  .trainer {
+    background-size: cover;
+    background-position: 50%;
+    box-shadow: inset 2px 2px 8px 400px rgba(0, 0, 0, 0.246);
+  }
+
+}
+
+
+@media (max-width:900px) {
+  .hero {
+    background-position: 45%;
+  }
+}
