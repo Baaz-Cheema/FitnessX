@@ -4,6 +4,7 @@ import About from "../components/About";
 import Blog from "../components/Blog";
 import Classes from "../components/Classes";
 import Discover from "../components/Discover";
+import Trainers from "../components/Trainers";
 
 export default function Home() {
     return (
@@ -12,6 +13,7 @@ export default function Home() {
             <About />
             <Blog />
             <Discover />
+            <Trainers />
             <Classes />
         </>
     )

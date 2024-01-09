@@ -5,6 +5,8 @@ import Root from './Pages/Root'
 import About from './Pages/About'
 import Classes from './Pages/Classes'
 import ClassDetail from './components/classes/ClassDetail'
+import Blog from './Pages/Blog'
+import TrainerDetail from './Pages/TrainerDetail'
 
 const router = createBrowserRouter([
   {
@@ -15,6 +17,16 @@ const router = createBrowserRouter([
         path: '/classes', children: [
           { index: true, element: <Classes /> },
           { path: ':className', element: <ClassDetail /> }
+        ]
+      },
+      {
+        path: '/blogs/:blogName', children: [
+          { index: true, element: <Blog /> },
+        ]
+      },
+      {
+        path: '/trainer/:name', children: [
+          { index: true, element: <TrainerDetail /> },
         ]
       }
     ]

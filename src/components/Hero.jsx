@@ -1,4 +1,5 @@
 import { motion } from "framer-motion"
+import { Link } from "react-router-dom"
 
 export default function Hero() {
     return (
@@ -14,8 +15,14 @@ export default function Hero() {
                     We’re your fitness destination, equipped with the best facilities and professional trainers. Your wellness journey starts here.
                 </motion.p>
                 <motion.div initial={{ y: 100, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: .7, duration: .2 }} className="font-montserrat flex gap-5 sm:flex-col">
-                    <motion.button className="font-bold px-10 py-5 bg-white  hover:bg-red-500 hover:-translate-y-[4px] transition-all duration-300 hover:text-white">SUBSCRIBE NOW</motion.button>
-                    <motion.button className="font-bold px-10 py-5 border text-white hover:bg-white hover:-translate-y-[4px] transition-all duration-300 hover:text-black"> BROWSE CLASSES</motion.button>
+                    <Link>
+                        <motion.button className="font-bold px-10 w-full py-5 bg-white  hover:bg-red-500 hover:-translate-y-[4px] transition-all duration-300 hover:text-white">SUBSCRIBE NOW</motion.button>
+                    </Link>
+
+                    <Link to={'/classes'}>
+                        <motion.button className="font-bold w-full px-10 py-5 border text-white hover:bg-white hover:-translate-y-[4px] transition-all duration-300 hover:text-black"> BROWSE CLASSES</motion.button>
+                    </Link>
+
                 </motion.div>
             </div>
         </section >

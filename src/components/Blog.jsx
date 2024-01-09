@@ -1,6 +1,7 @@
 import { motion } from "framer-motion"
 import { blogPosts } from "../UI/blogposts"
 import InfoCard from "../UI/InfoCard"
+import { Link } from "react-router-dom"
 
 export default function Blog() {
     return (
@@ -20,14 +21,14 @@ export default function Blog() {
                 </div>
                 <div className="flex justify-center gap-6 mx-5 lg:flex-col lg:items-center" >
                     {blogPosts.map((a, i) =>
-                        <InfoCard
-                            key={i}
-                            title={a.title}
-                            image={a.imageURL}
-                            date={a.date} />)}
-
+                        <Link key={i} to={'/blogs/' + a.title}>
+                            <InfoCard
+                                title={a.title}
+                                image={a.imageURL}
+                                date={a.date} />
+                        </Link>)}
                 </div>
             </main>
-        </section>
+        </section >
     )
 }
