@@ -58,7 +58,7 @@ export default function Cart({ closeCart, data }) {
                                         <div className="w-[70%] flex flex-col">
                                             <div className="flex justify-between ">
                                                 <h2 className="font-bold mb-2 text-lg uppercase sm:mb-1 xs:text-base">{a.title}</h2>
-                                                <input onBlur={(e) => updateValue(a, e)} type="number" className="bg-black border text-white pl-2 w-10" defaultValue={a.quantity} />
+                                                <input onBlur={(e) => updateValue(a, e)} type="number" min={1} className="bg-black border text-white pl-2 w-10" defaultValue={a.quantity} />
                                             </div>
 
                                             <p className="mb-1">$ {a.price}.00 USD</p>

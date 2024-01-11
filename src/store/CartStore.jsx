@@ -29,7 +29,7 @@ const cartSlice = createSlice({
             state.cartIsOpen = !state.cartIsOpen
         },
         updateValue(state, action) {
-            if (action.payload.quantity === 0) {
+            if (!action.payload.quantity) {
                 state.products = state.products.filter((a) => {
                     if (a.id === action.payload.item.id) {
                         if (a.size !== action.payload.item.size) {//filter out item where size and id is the same, keep the rest

@@ -23,7 +23,7 @@ export default function Root() {
         window.scrollTo({ top: 0, behavior: 'auto' })
     }, [location.pathname])
     return (
-        <>
+        <div className="overflow-hidden">
             <AnimatePresence>
                 {openCart && <Cart closeCart={closeCart} data={data} />}
             </AnimatePresence>
@@ -31,6 +31,6 @@ export default function Root() {
             <Outlet />
             <TrainerNum />
             <Footer />
-        </>
+        </div>
     )
 }

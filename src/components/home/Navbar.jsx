@@ -3,10 +3,13 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { cartActions } from "../../store/CartStore";
+import { useSelector } from "react-redux";
 
 
 export default function Navbar() {
     const dispatch = useDispatch()
+    const cartProducts = useSelector(state => state.products)
+    const cartItemAmount = cartProducts.reduce((p, c) => p + c.quantity, 0)
     function handleCart() {
         dispatch(cartActions.showCart())
     }
@@ -15,7 +18,7 @@ export default function Navbar() {
             <div className="max-w-[80rem] mx-auto">
                 <div className="flex justify-between items-center mx-5">
                     <div className="">
-                        <h3 className="uppercase text-slate-50 flex  items-center text-2xl font-bold font-montserrat"><i className='bx bx-dumbbell text-red-500 text-3xl mr-3'></i><Link to={'/'}>FitnessX</Link></h3>
+                        <h3 className="uppercase text-slate-50 flex  items-center text-2xl font-bold font-montserrat hover:scale-110 transition-transform"><i className='bx bx-dumbbell text-red-500 text-3xl mr-3'></i><Link to={'/'}>FitnessX</Link></h3>
                     </div>
                     <div className="flex items-center lg:hidden hover:text-red-500 font-montserrat uppercase [&>li]:hover:cursor-pointer">
                         <li className="px-3 text-slate-100 list-none  hover:text-red-500"><Link to={'/'}>home</Link></li>
@@ -24,14 +27,19 @@ export default function Navbar() {
                         <li className="px-3 text-slate-100 list-none  hover:text-red-500"><Link to={'/shop'}>shop</Link></li>
                         <li className="px-3 text-slate-100 list-none  hover:text-red-500"><Link to={'/membership'}> Membership</Link></li>
                     </div>
-                    <button onClick={handleCart} className="lg:hidden text-slate-50 font-semibold"><i className='bx bx-shopping-bag text-4xl' ></i></button>
+                    <div className="relative">
+                        {cartItemAmount > 0 && < span className="absolute left-0 -bottom-1 px-[5.5px] text-center text-xs text-white font-bold  bg-red-500">{cartItemAmount}</span>}
+                        <button onClick={handleCart} className="lg:hidden text-slate-50 font-semibold hover:scale-110 transition-transform"><i className='bx bx-shopping-bag text-4xl' ></i></button>
+                    </div>
                     <div className="hidden lg:flex items-center gap-5">
-                        <button onClick={handleCart} className=" text-slate-50 "><i className='bx bx-shopping-bag text-[2.4rem]' ></i></button>
+                        <div>
+                            <button onClick={handleCart} className=" text-slate-50 "><i className='bx bx-shopping-bag text-[2.4rem]' ></i></button>
+                        </div>
                         <Hamburger />
                     </div>
                 </div>
             </div>
-        </nav>
+        </nav >
     )
 }
 
