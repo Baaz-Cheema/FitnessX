@@ -26,7 +26,7 @@ export default function Navbar() {
                     </div>
                     <button onClick={handleCart} className="lg:hidden text-slate-50 font-semibold"><i className='bx bx-shopping-bag text-4xl' ></i></button>
                     <div className="hidden lg:flex items-center gap-5">
-                        <button className=" text-slate-50 "><i className='bx bx-shopping-bag text-[2.4rem]' ></i></button>
+                        <button onClick={handleCart} className=" text-slate-50 "><i className='bx bx-shopping-bag text-[2.4rem]' ></i></button>
                         <Hamburger />
                     </div>
                 </div>
@@ -36,13 +36,13 @@ export default function Navbar() {
 }
 
 
-function Hamburger({ scrollTo }) {
+function Hamburger() {
     const [open, setOpen] = useState(false)
 
-    function handleOnClick(section) {
-        scrollTo(section);
-        setOpen(false);
-    }
+    // function handleOnClick(section) {
+    //     scrollTo(section);
+    //     setOpen(false);
+    // }
 
     return (
         <>
@@ -56,8 +56,8 @@ function Hamburger({ scrollTo }) {
                     <li onClick={() => setOpen(false)} className="px-3  list-none text-zinc-600 text-[2rem] "><Link to={'/'}>home</Link></li>
                     <li onClick={() => setOpen(false)} className="px-3   text-zinc-600 list-none text-[2rem] "><Link to={'/about'}>about</Link></li>
                     <li onClick={() => setOpen(false)} className="px-3  text-zinc-600 list-none text-[2rem]"><Link to={'/classes'}>classes</Link></li>
+                    <li onClick={() => setOpen(false)} className="px-3  text-zinc-600 list-none text-[2rem]"><Link to={'/shop'}>shop</Link></li>
                     <li onClick={() => setOpen(false)} className="px-3   text-zinc-600 list-none text-[2rem] "><Link to={'/membership'}> Membership</Link></li>
-                    <li className="px-3   text-zinc-600 list-none text-[2rem] ">Blog</li>
 
                     <div onClick={() => setOpen(false)} className="absolute top-20 right-10 text-[4rem] text-red-500">
                         <i className='bx bx-x'></i>

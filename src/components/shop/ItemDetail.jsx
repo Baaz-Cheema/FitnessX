@@ -40,9 +40,7 @@ export default function ItemDetail() {
     }
     return (
         <>
-            <AnimatePresence>
-                {openCart && <Cart closeCart={closeCart} data={data} />}
-            </AnimatePresence>
+           
             <motion.section className="py-20" initial={{ y: 100, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: .3 }} >
                 <main className="max-w-[80rem] mx-auto">
                     <div className="mx-5 ">

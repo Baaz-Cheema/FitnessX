@@ -9,7 +9,7 @@ const cartSlice = createSlice({
         addItem(state, action) {
             let index = state.products.findIndex((a) => a.id === action.payload.id && a.size === action.payload.size)
             if (index === -1) {
-                state.products.push({ ...action.payload, quantity: 1 }) //id same? change in cart? or change logic here? id same prouduct diff based on size????
+                state.products.push({ ...action.payload, quantity: 1 }) //id same? change in cart? or change logic here? id same prouduct diff based on size???? will fix tmrrow
             } else {
                 state.products[index].quantity++
             }
@@ -29,8 +29,20 @@ const cartSlice = createSlice({
             state.cartIsOpen = !state.cartIsOpen
         },
         updateValue(state, action) {
-            let index = state.products.findIndex((a) => a.id === action.payload.item.id && a.size === action.payload.item.size)
-            state.products[index].quantity = action.payload.quantity
+            if (action.payload.quantity === 0) {
+                state.products = state.products.filter((a) => {
+                    if (a.id === action.payload.item.id) {
+                        if (a.size !== action.payload.item.size) {//filter out item where size and id is the same, keep the rest
+                            return a
+                        }
+                    } else {
+                        return a
+                    }
+                })
+            } else {
+                let index = state.products.findIndex((a) => a.id === action.payload.item.id && a.size === action.payload.item.size)
+                state.products[index].quantity = action.payload.quantity
+            }
         },
         emptyCart(state) {
             state.products = []

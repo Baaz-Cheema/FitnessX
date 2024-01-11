@@ -13,7 +13,7 @@ export default function Cart({ closeCart, data }) {
         dispatch(cartActions.removeItem(id))
     }
     function updateValue(item, e) {
-        dispatch(cartActions.updateValue({ item: item, quantity: e.target.value }))
+        dispatch(cartActions.updateValue({ item: item, quantity: parseInt(e.target.value) }))
     }
     function emptyCart() {
         setCheckout(true)
@@ -73,7 +73,7 @@ export default function Cart({ closeCart, data }) {
                             <motion.div key={'fallback'} className="flex flex-col items-center  flex-[.7]" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
                                 <p className="mb-5 text-gray-400 text-2xl font-montserrat pt-32">Cart is Empty</p>
                                 <Link className="w-full" to={'/shop'} onClick={closeCart}>
-                                    <button className="font-bold uppercase mx-auto block w-8/12 bg-white px-10 py-5 text-black hover:bg-red-500 hover:-translate-y-[4px] transition-all duration-300 hover:text-white">View Items</button>
+                                    <button className="font-bold uppercase mx-auto block w-8/12 bg-white px-10 py-5 text-black hover:bg-red-500 hover:-translate-y-[4px] transition-all duration-300 hover:text-white">Shop Items</button>
                                 </Link>
                             </motion.div>
                         }
