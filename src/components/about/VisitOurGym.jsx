@@ -1,6 +1,6 @@
 import { motion } from "framer-motion"
 
-export default function VisitUs() {
+export default function VisitOurGym() {
     return (
         <section className="py-32 bg-zinc-950 ">
 
