@@ -1,9 +1,9 @@
 import { motion } from "framer-motion"
 
-export default function Visitus() {
+export default function VisitUs() {
     return (
         <section className="py-32 bg-zinc-950 ">
-            
+
             <main className="max-w-[80rem] mx-auto">
                 <div className="mx-5">
                     <div className="flex mx-5 lg:flex-col justify-between items-center mb-10 relative">
