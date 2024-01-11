@@ -1,6 +1,6 @@
 import { motion } from "framer-motion"
-import { blogPosts } from "../UI/blogposts"
-import InfoCard from "../UI/InfoCard"
+import { blogPosts } from "../../UI/blogposts"
+import InfoCard from "../../UI/InfoCard"
 import { Link } from "react-router-dom"
 
 export default function Blog() {

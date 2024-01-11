@@ -48,7 +48,7 @@ export default function Footer() {
                 <hr className="bg-zinc-600 h-1 border-none" />
                 <div className="py-5 flex items-center justify-between mx-5 md:flex-col md:items-center md:gap-5">
                     <div>
-                        <h3 className="uppercase text-slate-50 flex  text-2xl font-bold md:pr-6 font-montserrat"><i className='bx bx-dumbbell text-red-500 text-3xl mr-3'></i> FitnessX</h3>
+                        <h3 className="uppercase text-slate-50 flex items-center text-2xl font-bold md:pr-6 font-montserrat"><i className='bx bx-dumbbell text-red-500 text-3xl mr-3'></i> FitnessX</h3>
                     </div>
                     <p className="text-zinc-400">@2023 FitnessX, all rights reserved.</p>
                     <div className="flex items-center gap-3">

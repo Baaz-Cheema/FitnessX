@@ -16,7 +16,7 @@ export const blogPosts = [
     {
         date: "22.08.2023",
         title: "Upcoming Personalized Workout Session",
-        imageURL: "https://images.unsplash.com/photo-1581009137042-c552e485697a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzR8fGd5bXxlbnwwfDB8MHx8fDI%3D",
+        imageURL: "https://images.unsplash.com/photo-1533681904393-9ab6eee7e408?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzd8fGd5bSUyMGdpcmx8ZW58MHwwfDB8fHwy",
         author: "Michael Sullivan",
         paragraph: "Get ready to workout with Micheal this Monday in a personalized workout session."
     }

@@ -1,24 +1,30 @@
 import { motion, AnimatePresence } from "framer-motion"
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { cartActions } from "../../store/CartStore";
 
 
 export default function Navbar() {
+    const dispatch = useDispatch()
+    function handleCart() {
+        dispatch(cartActions.showCart())
+    }
     return (
         <nav className=" bg-zinc-900 py-8">
             <div className="max-w-[80rem] mx-auto">
                 <div className="flex justify-between items-center mx-5">
                     <div className="">
-                        <h3 className="uppercase text-slate-50 flex  text-2xl font-bold font-montserrat"><i className='bx bx-dumbbell text-red-500 text-3xl mr-3'></i><Link to={'/'}>FitnessX</Link></h3>
+                        <h3 className="uppercase text-slate-50 flex  items-center text-2xl font-bold font-montserrat"><i className='bx bx-dumbbell text-red-500 text-3xl mr-3'></i><Link to={'/'}>FitnessX</Link></h3>
                     </div>
                     <div className="flex items-center lg:hidden hover:text-red-500 font-montserrat uppercase [&>li]:hover:cursor-pointer">
                         <li className="px-3 text-slate-100 list-none  hover:text-red-500"><Link to={'/'}>home</Link></li>
                         <li className="px-3 text-slate-100 list-none  hover:text-red-500"><Link to={'/about'}>About</Link></li>
                         <li className="px-3 text-slate-100 list-none  hover:text-red-500" ><Link to={'/classes'}>Classes</Link></li>
-                        <li className="px-3 text-slate-100 list-none  hover:text-red-500">Membership</li>
-                        <li className="px-3 text-slate-100 list-none  hover:text-red-500">Blog</li>
+                        <li className="px-3 text-slate-100 list-none  hover:text-red-500"><Link to={'/shop'}>shop</Link></li>
+                        <li className="px-3 text-slate-100 list-none  hover:text-red-500"><Link to={'/membership'}> Membership</Link></li>
                     </div>
-                    <button className="lg:hidden text-slate-50 font-semibold"><i className='bx bx-shopping-bag text-4xl' ></i></button>
+                    <button onClick={handleCart} className="lg:hidden text-slate-50 font-semibold"><i className='bx bx-shopping-bag text-4xl' ></i></button>
                     <div className="hidden lg:flex items-center gap-5">
                         <button className=" text-slate-50 "><i className='bx bx-shopping-bag text-[2.4rem]' ></i></button>
                         <Hamburger />
@@ -50,7 +56,7 @@ function Hamburger({ scrollTo }) {
                     <li onClick={() => setOpen(false)} className="px-3  list-none text-zinc-600 text-[2rem] "><Link to={'/'}>home</Link></li>
                     <li onClick={() => setOpen(false)} className="px-3   text-zinc-600 list-none text-[2rem] "><Link to={'/about'}>about</Link></li>
                     <li onClick={() => setOpen(false)} className="px-3  text-zinc-600 list-none text-[2rem]"><Link to={'/classes'}>classes</Link></li>
-                    <li className="px-3   text-zinc-600 list-none text-[2rem] ">Membership</li>
+                    <li onClick={() => setOpen(false)} className="px-3   text-zinc-600 list-none text-[2rem] "><Link to={'/membership'}> Membership</Link></li>
                     <li className="px-3   text-zinc-600 list-none text-[2rem] ">Blog</li>
 
                     <div onClick={() => setOpen(false)} className="absolute top-20 right-10 text-[4rem] text-red-500">

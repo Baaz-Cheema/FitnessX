@@ -1,6 +1,6 @@
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-import TrainerNum from "../components/TrainerNum";
+import Navbar from "../components/home/Navbar";
+import Footer from "../components/home/Footer";
+import TrainerNum from "../components/home/TrainerNum";
 import { Outlet } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";

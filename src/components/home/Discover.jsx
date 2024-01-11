@@ -1,4 +1,5 @@
 import { motion } from "framer-motion"
+import { Link } from "react-router-dom"
 export default function Discover() {
     return (
         <section className="py-20 relative h-[90vh] flex items-center overflow-hidden">
@@ -12,10 +13,13 @@ export default function Discover() {
                         discover what makes our gym different
                     </motion.h2>
                     <div className="border-red-500 hover:translate-y-[-4px] transition-transform inline-block">
-                        <motion.button initial={{ y: 30, opacity: 0 }} viewport={{ once: true }} whileInView={{ y: 0, opacity: 1 }} transition={{ delay: .3, duration: .2 }} className="font-montserrat border-none font-bold px-10 py-5 bg-white border text-black duration-300 hover:bg-red-500 hover:text-white uppercase">Subscribe now</motion.button>
+                        <Link to={'/membership'}>
+                            <motion.button className="font-bold px-10 font-montserrat w-full py-5 bg-white  hover:bg-red-500 hover:-translate-y-[4px] transition-all duration-300 hover:text-white">SUBSCRIBE NOW</motion.button>
+                        </Link>
+
                     </div>
                 </div>
-                <motion.div whileHover={{ scale: .9, transition: { delay: 0 ,duration:.2} }} initial={{ y: 40, opacity: 0 }} viewport={{ once: true }} whileInView={{ y: 0, opacity: 1 }} transition={{ delay: .7, duration: .2 }}
+                <motion.div whileHover={{ scale: .9, transition: { delay: 0, duration: .2 } }} initial={{ y: 40, opacity: 0 }} viewport={{ once: true }} whileInView={{ y: 0, opacity: 1 }} transition={{ delay: .7, duration: .2 }}
                     className="md:mb-7 mr-5 md:mr-0 rounded-full bg-white w-[10rem] shrink-0 h-[10rem] xs:w-[7rem] xs:h-[7rem] flex justify-center items-center cursor-pointer">
                     <i className='bx bxs-right-arrow text-[3.5rem] xs:text-[2.5rem]'></i>
                 </motion.div>

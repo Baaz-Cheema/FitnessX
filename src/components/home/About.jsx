@@ -1,5 +1,6 @@
 import Schedule from "./Schedule";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 export default function About() {
 
     return (
@@ -21,8 +22,14 @@ export default function About() {
                         Lorem im dolor, sit amet consectetur adipisicing elit. Voluptate ipsam maxime dolore, vel quo et? Error dolorumre repudiandae inventore!
                     </motion.p>
                     <motion.div initial={{ y: 100, opacity: 0 }} viewport={{ once: true }} whileInView={{ y: 0, opacity: 1 }} transition={{ delay: .7, duration: .2 }} className="font-montserrat flex gap-5 sm:flex-col">
-                        <motion.button className="font-bold px-10 py-5 bg-zinc-900 text-white border hover:bg-red-500 hover:-translate-y-[4px] transition-all duration-300 hover:text-white">SUBSCRIBE NOW</motion.button>
-                        <motion.button className="font-bold px-10 py-5 border text-black hover:-translate-y-[4px] transition-all duration-300 hover:bg-zinc-900 hover:text-white"> BROWSE CLASSES</motion.button>
+                        <Link to={'/membership'}>
+                            <motion.button className="font-bold px-10 py-5  bg-zinc-900 text-white border hover:bg-red-500 hover:-translate-y-[4px] transition-all duration-300 hover:text-white">SUBSCRIBE NOW</motion.button>
+                        </Link>
+                        <Link to={'/classes'}>
+                            <motion.button className="font-bold px-10 py-5  border text-black hover:-translate-y-[4px] transition-all duration-300 hover:bg-zinc-900 hover:text-white"> BROWSE CLASSES</motion.button>
+                        </Link>
+
+
                     </motion.div>
                 </div>
             </div>

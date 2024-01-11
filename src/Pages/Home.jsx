@@ -1,10 +1,10 @@
 
-import Hero from "../components/Hero";
-import About from "../components/About";
-import Blog from "../components/Blog";
-import Classes from "../components/Classes";
-import Discover from "../components/Discover";
-import Trainers from "../components/Trainers";
+import Hero from "../components/home/Hero";
+import About from "../components/home/About";
+import Blog from "../components/home/Blog";
+import Classes from "../components/home/Classes";
+import Discover from "../components/home/Discover";
+import Trainers from "../components/home/Trainers";
 
 export default function Home() {
     return (

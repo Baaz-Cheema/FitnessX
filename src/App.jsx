@@ -7,6 +7,10 @@ import Classes from './Pages/Classes'
 import ClassDetail from './components/classes/ClassDetail'
 import Blog from './Pages/Blog'
 import TrainerDetail from './Pages/TrainerDetail'
+import Membership from './Pages/Membership'
+import Shop from './Pages/Shop'
+import ItemDetail from './components/shop/ItemDetail'
+
 
 const router = createBrowserRouter([
   {
@@ -28,7 +32,17 @@ const router = createBrowserRouter([
         path: '/trainer/:name', children: [
           { index: true, element: <TrainerDetail /> },
         ]
-      }
+      },
+      {
+        path: '/shop', children: [
+          { index: true, element: <Shop /> },
+          {
+            path: ':shopItem', element:
+              <ItemDetail />
+          }
+        ]
+      },
+      { path: '/membership', element: <Membership /> }
     ]
   }
 ])
