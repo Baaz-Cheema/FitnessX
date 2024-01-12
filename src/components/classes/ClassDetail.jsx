@@ -2,14 +2,15 @@ import { useParams } from "react-router-dom"
 import { motion } from "framer-motion"
 import ClassInfo from "./ClassInfo"
 import { classposts, titles } from "../../UI/classposts"
-import { useRef } from "react"
 import { useState } from "react"
+import VideoModal from "../../UI/VideoModal"
 
 export default function ClassDetail() {
     const params = useParams()
+    const [open, setOpen] = useState(false)
     const paramName = params.className
     const pathExists = titles.includes(paramName)
-    const [classData, setclassData] = useState(classposts.filter(a => a.title === paramName)[0])
+    const classData = classposts.filter(a => a.title === paramName)[0]
 
     if (!pathExists) {
         return <>
@@ -30,12 +31,13 @@ export default function ClassDetail() {
                             {classData.description}
                         </p>
                         <div className="flex items-center justify-center relative overflow-hidden  ">
-                            <motion.div whileHover={{ scale: .9, transition: { delay: 0, duration: .2 } }}
+                            <motion.div onClick={() => setOpen(!open)} whileHover={{ scale: .9, transition: { delay: 0, duration: .2 } }}
                                 className="absolute z-[3] peer md:mr-0 rounded-full bg-white w-[8rem] shrink-0 h-[8rem] md:w-[6rem] md:h-[6rem] xs:w-[5rem] xs:h-[5rem] flex justify-center items-center cursor-pointer">
                                 <i className='bx bxs-right-arrow text-[3.5rem] md:text-[2.5rem] xs:text-[2rem]'></i>
                             </motion.div>
                             <img className="object-cover w-full max-h-[30rem] transition-all peer-hover:scale-105 peer-hover:z-[-1]"
                                 src={classData.imageURL} alt="" />
+                            {open && <VideoModal setOpen={setOpen} />}
                         </div>
                         <div className="hidden lg:flex lg:justify-center lg:mt-10">
                             <ClassInfo classData={classData} />

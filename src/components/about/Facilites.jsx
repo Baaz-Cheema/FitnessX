@@ -1,6 +1,9 @@
 import { motion } from "framer-motion"
+import { useState } from "react"
+import VideoModal from "../../UI/VideoModal"
 
 export default function Facilities() {
+    const [open, setOpen] = useState(false)
     return (
         <section className="pb-20">
             <div className="flex justify-center bg-red-500 relative top-0 ">
@@ -18,13 +21,14 @@ export default function Facilities() {
             </div>
             <motion.div className="max-w-[70rem] mx-auto " initial={{ y: 40, opacity: 0 }} viewport={{ once: true }} whileInView={{ y: 0, opacity: 1 }} transition={{ delay: .7, duration: .2 }}>
                 <div className="mx-5 flex items-center justify-center relative overflow-hidden  ">
-                    <motion.div whileHover={{ scale: .9, transition: { delay: 0, duration: .2 } }}
+                    <motion.div onClick={() => setOpen(!open)} whileHover={{ scale: .9, transition: { delay: 0, duration: .2 } }}
                         className="absolute z-[1] peer md:mr-0 rounded-full bg-white w-[10rem] shrink-0 h-[10rem] md:w-[7rem] md:h-[7rem] xs:w-[5rem] xs:h-[5rem] flex justify-center items-center cursor-pointer">
                         <i className='bx bxs-right-arrow text-[3.5rem] md:text-[2.5rem] xs:text-[2rem]'></i>
                     </motion.div>
                     <img className="object-cover w-full transition-all peer-hover:scale-105 peer-hover:z-[-1]" src="https://images.unsplash.com/photo-1593079831268-3381b0db4a77?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
                 </div>
             </motion.div>
+            {open && <VideoModal setOpen={setOpen} />}
         </section>
     )
 }

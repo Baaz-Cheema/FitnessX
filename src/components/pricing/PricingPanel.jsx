@@ -14,7 +14,9 @@ export default function PricingPanel({ plan }) {
                         <li className="flex items-center text-zinc-400"><i className='bx bx-check text-3xl mr-2'></i>Access to monthly webinar</li>
                         <li className="flex items-center  text-zinc-400"><i className='bx bx-check text-3xl mr-2'></i>Priority booking for new classes</li>
                     </div>
-                    <motion.button className=" font-montserrat font-bold px-16 py-5 bg-zinc-900 text-white hover:bg-red-500 hover:-translate-y-[4px] transition-all duration-300 hover:text-white">SUBSCRIBE</motion.button>
+                    <a href="mailto:chrisbahadur1@gmail.com">
+                        <motion.button className=" font-montserrat font-bold px-16 py-5 bg-zinc-900 text-white hover:bg-red-500 hover:-translate-y-[4px] transition-all duration-300 hover:text-white">SUBSCRIBE</motion.button>
+                    </a>
                 </div>
                 <div className="flex flex-col items-center py-10 h-auto px-5 lg:px-10 bg-zinc-950 text-white flex-1 cursor-pointer hover:-translate-y-3 transition-transform">
                     <p className="uppercase mb-10 text-white text-xl font-montserrat ">Enterprise</p>
@@ -29,7 +31,9 @@ export default function PricingPanel({ plan }) {
                         <li className="flex items-center"><i className='bx bx-check text-3xl mr-2'></i>Access to a private community</li>
                         <li className="flex items-center"><i className='bx bx-check text-3xl mr-2'></i>Access to diet plans</li>
                     </div>
-                    <motion.button className=" font-montserrat font-bold px-16 py-5 bg-white text-black hover:bg-red-500 hover:-translate-y-[4px] transition-all duration-300 hover:text-white">SUBSCRIBE</motion.button>
+                    <a href="mailto:chrisbahadur1@gmail.com">
+                        <motion.button className=" font-montserrat font-bold px-16 py-5 bg-white text-black hover:bg-red-500 hover:-translate-y-[4px] transition-all duration-300 hover:text-white">SUBSCRIBE</motion.button>
+                    </a>
                 </div>
                 <div className="flex flex-col items-center py-10 px-5 lg:px-10  max-h-[32rem] border-2 flex-1 cursor-pointer hover:-translate-y-3 transition-transform">
                     <p className="uppercase mb-10 text-xl font-montserrat">Professional</p>
@@ -42,7 +46,9 @@ export default function PricingPanel({ plan }) {
                         <li className="flex items-center"><i className='bx bx-check text-3xl mr-2'></i>Access to monthly webinar</li>
                         <li className="flex items-center text-zinc-400"><i className='bx bx-check text-3xl mr-2'></i>Priority booking for new classes</li>
                     </div>
-                    <motion.button className=" font-montserrat font-bold px-16 py-5 bg-zinc-900 text-white hover:bg-red-500 hover:-translate-y-[4px] transition-all duration-300 hover:text-white">SUBSCRIBE</motion.button>
+                    <a href="mailto:chrisbahadur1@gmail.com">
+                        <motion.button className=" font-montserrat font-bold px-16 py-5 bg-zinc-900 text-white hover:bg-red-500 hover:-translate-y-[4px] transition-all duration-300 hover:text-white">SUBSCRIBE</motion.button>
+                    </a>
                 </div>
             </main>
         </motion.section>

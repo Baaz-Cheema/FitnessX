@@ -10,8 +10,8 @@ export default function Schedule() {
                     </div>
                     <div>
                         <h3 className="text-2xl mb-3">Contact</h3>
-                        <p className="underline mb-2">CONTACT@FITNESSX.COM</p>
-                        <p className="underline">(0323) 6333 123</p>
+                        <a href="mailto:chrisbahadur1@gmail.com" className="underline mb-2 block">CONTACT@FITNESSX.COM</a>
+                        <a href="https://wa.me/923236333123" className="underline block">(0323) 6333 123</a>
                     </div>
                 </motion.div>
                 <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: .5, delay: .2 }} className="flex gap-5 text-white font-montserrat xs:flex-col xs:gap-1 sm:w-full">
