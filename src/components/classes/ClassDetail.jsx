@@ -4,6 +4,7 @@ import ClassInfo from "./ClassInfo"
 import { classposts, titles } from "../../UI/classposts"
 import { useState } from "react"
 import VideoModal from "../../UI/VideoModal"
+import { Link } from "react-router-dom"
 
 export default function ClassDetail() {
     const params = useParams()
@@ -13,10 +14,7 @@ export default function ClassDetail() {
     const classData = classposts.filter(a => a.title === paramName)[0]
 
     if (!pathExists) {
-        return <>
-            <h1 className="text-6xl">EOROROROOORO </h1>
-            <p>{paramName}</p>
-        </>
+       throw new Error('not found')
     }
     return (
         <section className="py-20 mb-20  relative">

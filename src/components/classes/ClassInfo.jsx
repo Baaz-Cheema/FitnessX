@@ -29,9 +29,9 @@ export default function ClassInfo({ classData }) {
 
                     </div>
                 </Link>
-                <div className="flex justify-center mt-5">
+                <Link to={'/membership'} className="flex justify-center mt-5 block">
                     <button className=" font-bold px-14 py-5 border text-white hover:-translate-y-[4px] transition-all duration-300 bg-zinc-900 hover:bg-red-500 hover:text-white uppercase"> Book a class</button>
-                </div>
+                </Link>
             </div>
         </motion.div>
     )
