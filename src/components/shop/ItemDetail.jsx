@@ -1,9 +1,7 @@
 import { motion, AnimatePresence } from "framer-motion"
 import { useParams } from "react-router-dom"
 import { products } from "../../UI/gymItems"
-import { useState } from "react"
-import Cart from "./Cart"
-import { useSelector } from "react-redux"
+import { useState, useEffect } from "react"
 import { useDispatch } from "react-redux"
 import ImagePreviewer from "./ImagePreviewer"
 import { cartActions } from "../../store/CartStore"
@@ -12,11 +10,10 @@ import ItemDescription from "./ItemDescription"
 export default function ItemDetail() {
     const [size, setSize] = useState('select size')
     const dispatch = useDispatch()
-    const data = useSelector(state => state.products)
     const [open, setOpen] = useState(false)
-    const openCart = useSelector(state => state.cartIsOpen)
     const [error, setError] = useState(false)
     const [index, setIndex] = useState(0)
+
 
     const [showPreviewer, setShowPreviewer] = useState(false)
 
@@ -38,9 +35,15 @@ export default function ItemDetail() {
         setShowPreviewer(true)
         setIndex(val)
     }
+    useEffect(() => {
+        if (showPreviewer) {
+            document.body.style.overflow = 'hidden'; // Or other preferred method
+        } else {
+            document.body.style.overflow = 'auto';
+        }
+    }, [showPreviewer]);
     return (
         <>
-           
             <motion.section className="py-20" initial={{ y: 100, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: .3 }} >
                 <main className="max-w-[80rem] mx-auto">
                     <div className="mx-5 ">
@@ -62,7 +65,7 @@ export default function ItemDetail() {
                                 </div>
                             </div>
                             <AnimatePresence>
-                                {showPreviewer && <ImagePreviewer index={index} setIndex={setIndex} image={product.image} setShowPreviewer={setShowPreviewer} />}
+                                {showPreviewer && <ImagePreviewer showPreviewer={showPreviewer} index={index} setIndex={setIndex} image={product.image} setShowPreviewer={setShowPreviewer} />}
                             </AnimatePresence>
                             <div className="font-montserrat self-center w-5/12 lg:w-8/12 md:w-full">
                                 <h3 className="uppercase font-bold text-5xl mb-5 sm:text-3xl">{product.title}</h3>

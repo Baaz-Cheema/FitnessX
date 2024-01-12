@@ -5,7 +5,7 @@ export default function TrainerBody({ data }) {
             <main className="max-w-[60rem] mx-auto font-montserrat">
                 <motion.div className="mx-5" initial={{ y: 100, opacity: 0 }} viewport={{ once: true }} whileInView={{ y: 0, opacity: 1 }} transition={{ duration: .2 }}>
                     <h2
-                        className="z-10 text-white  text-[3.3rem] sm:text-[2.3rem] xs:text-[1.9rem] uppercase font-montserrat font-extrabold leading-[3.5rem] sm:leading-[2.5rem] mt-20 mb-5">
+                        className="z-10 text-white  text-[3.3rem] sm:text-[2.3rem] xs:text-[1.9rem] uppercase font-montserrat font-extrabold leading-[3.5rem] sm:leading-[2.5rem]  mb-5">
                         about {data}
                     </h2>
                     <p className="text-zinc-400 mb-7">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem nam placeat officiis voluptatibus culpa! Enim soluta eveniet id quis porro, voluptatibus consequuntur beatae voluptate fugit ad, expedita praesentium itaque magnam!</p>
